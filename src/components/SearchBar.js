@@ -8,7 +8,7 @@ const SearchBar = () => {
   return (
     <Stack>
 <input className='search-bar'
-placeholder='search.....'
+placeholder='Search.....'
 value="" style={{height:'42px',borderRadius:'20px',
   border:'1px solid red'
 }}
