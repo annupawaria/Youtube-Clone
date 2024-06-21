@@ -22,7 +22,7 @@ const Feed = () => {
 </Box>
 <Box p={2} sx={{overflow:'auto',height:'90vh',flex:2}}>
   <Typography variant="h4"fontWeight="bold" color="white" mb={2} >
-   New <span style={{color:"red"}}> Videos</span> 
+   {selectedCategory} <span style={{color:"red"}}> Videos</span> 
   </Typography>
   <Videos videos={videos}/>
 
