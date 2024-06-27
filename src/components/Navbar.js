@@ -2,6 +2,7 @@ import React from 'react'
 import {Stack,Box} from "@mui/material"
 import { logo } from '../utils/constants'
 import {Link} from "react-router-dom"
+import SearchBar from './SearchFeed1js'
 
 
 const Navbar = () => {
@@ -10,11 +11,7 @@ const Navbar = () => {
 <Link to="/">
   <img src={logo} style={{height:"66px",width:"66px"}}/>
 </Link>
-<Box>
-<input type="text" placeholder="serach......" style={{borderRadius:"44px",height:"44px",width:"366px",fontSize:"22px",justifyItems:"cenetr",alignItems:'center',}}/>
-
-</Box>
-
+<SearchBar/>
     </Box>
   )
 }
