@@ -1,15 +1,30 @@
 import React from 'react'
-import { Box, IconButton } from "@mui/material"
-import {SearchIcon} from "@mui/icons-material/Search"
+import { Box, IconButton,Paper } from "@mui/material"
+import SearchIcon from "@mui/icons-material/Search"
 
 const SearchBar = () => {
   return (
-    <Box>
-<input type="text" placeholder="serach......" style={{borderRadius:"44px",height:"44px",width:"366px",fontSize:"22px",justifyItems:"cenetr",alignItems:'center',}}/>
-<IconButton>
-  <SearchIcon/>
-</IconButton>
-</Box>
+    <Paper
+    component='form'
+    // onSubmit={onhandleSubmit}
+    sx={{
+      borderRadius: 20,
+      border: '1px solid #e3e3e3',
+      pl: 2,
+      boxShadow: 'none',
+      mr: { sm: 5 },
+    }}
+  >
+    <input
+      className='search-bar'
+      placeholder='Search...'
+      // value={searchTerm}
+      // onChange={(e) => setSearchTerm(e.target.value)}
+    />
+    <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
+      <SearchIcon />
+    </IconButton>
+  </Paper>
 
   )
 }
