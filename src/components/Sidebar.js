@@ -2,10 +2,10 @@ import React from "react";
 import { Stack } from "@mui/material";
 
 import { categories } from "../utils/constants";
-const selectedCategory="new"
 
 
-const Categories = () => (
+
+const Categories = ({selectedCategory,setSelectedCategory}) => (
   
   <Stack
     direction="row"
@@ -18,6 +18,7 @@ const Categories = () => (
     {categories.map((category) => (
       <button
         className="category-btn"
+        onClick={()=>setSelectedCategory(category.name)}
         style={{background:category.name === selectedCategory && "red",color:"white"}}
 
 
