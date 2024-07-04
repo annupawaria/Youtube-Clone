@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import { Box, IconButton } from "@mui/material"
 import Search from "@mui/icons-material/Search"
-
+import { useNavigate } from 'react-router-dom'
 const SearchBar = () => {
   const[searchTerm,setSearchTerm]=useState("")
+  const navigate=useNavigate()
 
-const handleSubmit(()=>{
+const handleSubmit=(e)=>{
 e.preventDefault()
-})
+if(searchTerm){
+  navigate(`/search/${searchTerm}`);
+  setSearchTerm("")
+}
+}
 
   return (
     <form onSubmit={handleSubmit}>
